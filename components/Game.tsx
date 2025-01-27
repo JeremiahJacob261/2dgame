@@ -153,16 +153,19 @@ const Game: React.FC = () => {
             ref={canvasRef}
             width={canvasSize.width}
             height={canvasSize.height}
-            className="border-4 border-white"
+            className="border-4 border-white shadow-lg"
             onTouchStart={handleTouchStart}
             onDoubleClick={handleDoubleClick}
           />
           {gameState.isGameOver && (
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-              <div className="bg-white p-4 rounded">
-                <h2 className="text-2xl font-bold mb-2">Game Over</h2>
-                <p className="mb-4">Score: {gameState.score}</p>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={restartGame}>
+              <div className="bg-white p-6 rounded-lg shadow-xl">
+                <h2 className="text-3xl font-bold mb-4 text-gray-800">Game Over</h2>
+                <p className="text-xl mb-6 text-gray-600">Score: {gameState.score}</p>
+                <button
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-200"
+                  onClick={restartGame}
+                >
                   Restart
                 </button>
               </div>
