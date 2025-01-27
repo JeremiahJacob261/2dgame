@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+  .game-container {
+    display: none;
+  }
+  .desktop-message {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-message {
+    display: none;
+  }
+}
+
