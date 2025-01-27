@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 import { useRef, useEffect, useState, useCallback } from "react"
 import { drawGame, updateGame, type GameState, LANE_COUNT } from "../utils/gameLogic"
